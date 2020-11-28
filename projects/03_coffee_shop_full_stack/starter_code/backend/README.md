@@ -4,7 +4,7 @@
 
 ### Installing Dependencies
 
-#### Python 3.7
+#### Python 3.8
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
@@ -48,10 +48,25 @@ flask run --reload
 
 The `--reload` flag will detect file changes and restart the server automatically.
 
+for windows powershell
+```powershell
+$env:FLASK_APP="api.py"
+$env:FLASK_DEBUG="true"
+flask run
+```
+
+the FLASK_DEBUG flag similar to --reload
+
 ## Tasks
 
 ### Setup Auth0
-
+There is already an account with connection settings in the code ... the following accounts are registered for demonestration
+```
+    man@coffee.com           password = 123!@#qweQWE     [Manager]
+    bar1@coffee.com          password = 123!@#qweQWE     [Barista]
+    bar2@coffee.com          password = 123!@#qweQWE     [Barista]
+```
+# Otherwise you can
 1. Create a new Auth0 Account
 2. Select a unique tenant domain
 3. Create a new, single page web application
@@ -79,7 +94,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ### Implement The Server
 
-There are `@TODO` comments throughout the `./backend/src`. We recommend tackling the files in order and from top to bottom:
+All api and authentication/autherization are found in these files
 
 1. `./src/auth/auth.py`
 2. `./src/api.py`
